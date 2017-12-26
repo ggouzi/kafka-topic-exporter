@@ -5,15 +5,15 @@ Consume Kafka topics and export to Prometheus
 ### Start process
 
 ```
-java -jar kafka-topic-exporter-0.0.1-jar-with-dependencies.jar config/kafka-topic-exporter.properties
+java -jar target/kafka-topic-exporter-0.0.4-jar-with-dependencies.jar config/kafka-topic-exporter.sample.properties 
 ```
 
 ### Configuration
 
 ```
-exporter.port=10040
+exporter.port=12340
 exporter.metric.expire=120
-bootstrap.servers=localhost:6667
+bootstrap.servers=localhost:9092
 group.id=test
 # Java regex
 kafka.consumer.topics=export\..*
